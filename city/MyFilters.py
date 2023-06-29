@@ -2,7 +2,7 @@ from rest_framework.filters import BaseFilterBackend
 from rest_framework.exceptions import ParseError
 
 class AreaFilter(BaseFilterBackend):
-    '''post format: ?area=min_area,max_area'''
+    '''get format: ?area=min_area,max_area'''
     area_param = 'area'  # The URL query parameter which contains the
 
     def get_filter_area(self, request, **kwargs):
